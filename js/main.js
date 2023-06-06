@@ -31,7 +31,9 @@ createApp({
             this.NewToDoElement.toDo = NewElement;
             this.TodoList.push(this.NewToDoElement)
                 console.log(this.NewToDoElement)
-        }
+        },
+
+        
     }
 
 }).mount("#app");
