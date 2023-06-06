@@ -3,7 +3,7 @@ const {createApp} = Vue;
 createApp({ 
     data(){
         return{
-            TodoList : [
+            toDoList : [
                 {
                     toDo :  "Fare la lista della spesa",
                     done : false
@@ -17,20 +17,15 @@ createApp({
                     done : true
                 },
         ],
-        NewToDoElement : {
-            toDo : "",
-            done : false
-        },
 
-        text : "",
+        textToDo : "",
         }
     },
 
     methods : {
-        AddNewElement(NewElement){
-            this.NewToDoElement.toDo = NewElement;
-            this.TodoList.push(this.NewToDoElement)
-                console.log(this.NewToDoElement)
+        AddNewElement(newElement){
+            this.toDoList.push({toDo : newElement , done : false});
+            this.textToDo = "";
         },
 
         

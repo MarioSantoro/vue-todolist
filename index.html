@@ -15,12 +15,12 @@
     <main>
         <div id="app">
           <ul>
-            <li v-for="(TodoItem , index) in TodoList" :key="index" :class="TodoList[index].done === true ? 'done' : ''">
+            <li v-for="(TodoItem , index) in toDoList" :key="index" :class="toDoList[index].done === true ? 'done' : ''">
               {{TodoItem.toDo}}
             </li>
           </ul>
-          <input type="text" placeholder="Inserisci una cosa che devi fare" v-model="text">
-          <button @click="AddNewElement(text)">Add element</button>
+          <input type="text" placeholder="Inserisci una cosa che devi fare" v-model="textToDo">
+          <button @click="AddNewElement(textToDo)">Add element</button>
         </div>
     </main>
     
