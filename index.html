@@ -23,7 +23,7 @@
             <ul>
                 <li v-for="(TodoItem , index) in toDoList" @click="ToDoComplete(index)" class="mb-3 d-flex justify-content-between align-items-center" :class="toDoList[index].done === true ? 'done' : ''">
                   {{TodoItem.toDo}}
-                  <img src="img/x.png" alt="" @click.stop.prevent="RemoveItemList(index)">
+                  <img src="img/x.png" alt="" @click.stop="RemoveItemList(index)">
                 </li>
               </ul>
               <div class="action mt-5 d-flex justify-content-between">
