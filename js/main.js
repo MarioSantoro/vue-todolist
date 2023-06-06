@@ -24,11 +24,19 @@ createApp({
 
     methods : {
         AddNewElement(newElement){
-            this.toDoList.push({toDo : newElement , done : false});
-            this.textToDo = "";
+            if(this.textToDo !== ""){
+                this.toDoList.push({toDo : newElement , done : false});
+                this.textToDo = "";
+            }
+        },
+        
+        RemoveItemList(index){
+            this.toDoList.splice(index , 1);
         },
 
-        
+        ToDoComplete(index){
+            this.toDoList[index].done = !this.toDoList[index].done;
+        }
     }
 
 }).mount("#app");

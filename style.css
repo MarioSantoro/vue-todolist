@@ -4,6 +4,40 @@
     box-sizing: border-box;
 }
 
+main{
+    height: 100vh;
+}
+div.list-container{
+    padding: 1rem;
+    background-color: rgb(32, 164, 224);
+    border-radius: 2rem;
+    width: 500px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li{
+    border-bottom: 2px solid white;
+    padding-bottom: .55rem;
+    cursor: pointer;
+}
+
+input{
+    border: none;
+    border-radius: .75rem;
+    margin-right: .22rem;
+    width: calc(100% - 140px);
+}
+
 .done{
     text-decoration: line-through;
+}
+
+img{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
